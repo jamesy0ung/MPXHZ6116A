@@ -27,18 +27,13 @@ void setup() {
 }
 
 void loop() {
-  float pressure = pressureSensor.readPressure();
   float compensatedPressure = pressureSensor.readPressureWithTempComp(25.0); 
-
-  Serial.print("Pressure: ");
-  Serial.print(pressure);
-  Serial.println(" kPa");
 
   Serial.print("Compensated Pressure: ");
   Serial.print(compensatedPressure);
   Serial.println(" kPa");
 
-  delay(1000);
+  delay(2000);
 }
 ```
 
